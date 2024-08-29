@@ -1,0 +1,854 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgb(40, 40, 79);
+}
+
+body {
+    background-color: rgb(232, 232, 232);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: white;
+    height: 8vh;
+    width: 98vw;
+    margin: auto;
+    margin-top: 1vh;
+    border-radius: 1vw;
+    align-items: center;
+}
+
+.navleft a,
+.navright a {
+    color: rgb(40, 40, 79);
+    text-decoration: none;
+}
+
+.navleft a {
+    font-weight: 500;
+    font-size: 1.3em;
+}
+
+.navright a {
+    width: 8vw;
+    text-align: center;
+    transition: all ease 300ms;
+    font-weight: 500;
+    border-radius: 1vw;
+}
+
+
+.navright,
+.navleft {
+    display: flex;
+    justify-content: space-evenly;
+    height: 5vh;
+    line-height: 5vh;
+}
+
+.navleft {
+    width: 14%;
+}
+
+.navright {
+    width: 36%;
+}
+
+.navright a:hover {
+    background-color: rgba(0, 0, 0, 0.07);
+    color: rgba(47, 177, 231, 1)
+}
+
+.tagline {
+    font-size: 3em;
+    line-height: 10vh;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    background: rgb(122, 81, 180);
+    background: linear-gradient(315deg, rgba(122, 81, 180, 1) 0%, rgba(47, 177, 231, 1) 100%);
+    width: 98vw;
+    margin: auto;
+    border-radius: 1vw;
+    height: 70vh;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.searchbar {
+    width: 70%;
+    height: 8vh;
+    border-radius: 0.5vw;
+    border-style: solid;
+    text-align: center;
+    font-size: 1.2em;
+    background: transparent;
+    border-color: white;
+    color: white;
+    transition: all ease 400ms;
+}
+
+.searchbar::placeholder {
+    color: white;
+}
+
+.searchbar:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 2vw;
+    width: 50%;
+}
+
+.radio,
+.radiobtn {
+    display: flex;
+    width: 50%;
+    justify-content: space-evenly;
+
+}
+
+#p1,
+#p2,
+#p3,
+#c1,
+#c2,
+#c3,
+#c4,
+#c5,
+#c6,
+#c7,
+#c8,
+#c9,
+#t1,
+#t2,
+#t3,
+#t4 {
+    visibility: hidden;
+}
+
+#p1:hover~.white>.row>.radio>.radiobtn1,
+#p2:hover~.white>.row>.radio>.radiobtn2,
+#p3:hover~.white>.row>.radio>.radiobtn3 {
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: ease 300ms;
+}
+
+#p1:checked~.white>.row>.radio>.radiobtn1,
+#p2:checked~.white>.row>.radio>.radiobtn2,
+#p3:checked~.white>.row>.radio>.radiobtn3 {
+    background-color: white;
+}
+
+#p1:checked~.white>.row>.radio>.radiobtn1 label,
+#p2:checked~.white>.row>.radio>.radiobtn2 label,
+#p3:checked~.white>.row>.radio>.radiobtn3 label {
+    background: linear-gradient(315deg, rgba(122, 81, 180, 1) 0%, rgba(47, 177, 231, 1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+
+.row h1 {
+    color: white;
+    font-size: 3em;
+    height: 10vh;
+    line-height: 10vh;
+    width: 38vw;
+    border-radius: 1vw;
+}
+
+.radiobtn1,
+.radiobtn2,
+.radiobtn3 {
+    border-style: solid;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 1vw;
+    border-color: white;
+    color: white;
+    line-height: 6vh;
+}
+
+.search {
+    width: 22vw;
+    height: 8vh;
+    font-size: 1.7em;
+    font-weight: 500;
+    border-style: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0.3vw;
+    transition: all ease 300ms;
+}
+
+.search p {
+    background: linear-gradient(315deg, rgba(122, 81, 180, 1) 0%, rgba(47, 177, 231, 1) 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+.search:hover {
+    border-radius: 1.8vw;
+    width: 20vw;
+}
+
+.row hr {
+    background-color: white;
+    width: 10vw;
+}
+
+.radiobtn1 label,
+.radiobtn2 label,
+.radiobtn3 label {
+    color: white;
+    display: block;
+    width: 12vw;
+    cursor: pointer;
+}
+
+.radiobtn4 label,
+.radiobtn5 label,
+.radiobtn6 label,
+.radiobtn7 label,
+.radiobtn8 label,
+.radiobtn9 label,
+.radiobtn10 label,
+.radiobtn11 label,
+.radiobtn12 label {
+    display: block;
+    width: 12vw;
+    cursor: pointer;
+}
+
+.row2 {
+    display: flex;
+    background-color: white;
+    width: 98vw;
+    height: 70vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 1vw;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.row2 h1 {
+    color: rgb(40, 40, 79);
+    font-size: 3em;
+}
+
+.row2 .radiobtn1,
+.row2 .radiobtn2,
+.row2 .radiobtn3,
+.row2 .radiobtn4,
+.row2 .radiobtn5,
+.row2 .radiobtn6,
+.row2 .radiobtn7,
+.row2 .radiobtn8,
+.row2 .radiobtn9,
+.row2 .radiobtn10,
+.row2 .radiobtn11,
+.row2 .radiobtn12 {
+    border-style: solid;
+    width: 12vw;
+    height: 6vh;
+    border-radius: 1vw;
+    border-color: rgb(40, 40, 79);
+    color: rgb(40, 40, 79);
+    line-height: 6vh;
+}
+
+#c1:hover~.row2>.radio>.radiobtn4,
+#c2:hover~.row2>.radio>.radiobtn5,
+#c3:hover~.row2>.radio>.radiobtn6,
+#c4:hover~.row2>.radio>.radiobtn7,
+#c5:hover~.row2>.radio>.radiobtn8,
+#c6:hover~.row2>.radio>.radiobtn9,
+#c7:hover~.row2>.radio>.radiobtn10,
+#c8:hover~.row2>.radio>.radiobtn11,
+#c9:hover~.row2>.radio>.radiobtn12 {
+    background-color: rgba(0, 0, 0, 0.3);
+    transition: all ease 300ms;
+}
+
+#c1:checked~.row2>.radio>.radiobtn4,
+#c2:checked~.row2>.radio>.radiobtn5,
+#c3:checked~.row2>.radio>.radiobtn6,
+#c4:checked~.row2>.radio>.radiobtn7,
+#c5:checked~.row2>.radio>.radiobtn8,
+#c6:checked~.row2>.radio>.radiobtn9,
+#c7:checked~.row2>.radio>.radiobtn10,
+#c8:checked~.row2>.radio>.radiobtn11,
+#c9:checked~.row2>.radio>.radiobtn12 {
+    background-color: rgb(40, 40, 79);
+}
+
+#c1:checked~.row2>.radio>.radiobtn4 label,
+#c2:checked~.row2>.radio>.radiobtn5 label,
+#c3:checked~.row2>.radio>.radiobtn6 label,
+#c4:checked~.row2>.radio>.radiobtn7 label,
+#c5:checked~.row2>.radio>.radiobtn8 label,
+#c6:checked~.row2>.radio>.radiobtn9 label,
+#c7:checked~.row2>.radio>.radiobtn10 label,
+#c8:checked~.row2>.radio>.radiobtn11 label,
+#c9:checked~.row2>.radio>.radiobtn12 label {
+    color: white;
+    transition: all ease 300ms;
+}
+
+.white {
+    background-color: white;
+    height: 76vh;
+    display: flex;
+}
+
+.logwin,
+.regwin {
+    display: flex;
+    background-color: white;
+    width: 86vw;
+    height: 86vh;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 1vw;
+    flex-direction: row;
+}
+
+.regwin {
+    height: 120vh;
+}
+
+.logleft,
+.regleft {
+    display: flex;
+    width: 50vw;
+    flex-direction: column;
+    height: 68%;
+    text-align: left;
+    margin: 2vw;
+    justify-content: space-evenly;
+}
+
+.regleft {
+    height: 90%;
+}
+
+.input input {
+    height: 8vh;
+    border-style: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.4vw;
+    font-size: 1.6em;
+    padding: 0 1vw 0 1vw;
+    text-align: center;
+}
+
+.logright,
+.regright {
+    width: 24vw;
+    margin: 2vw;
+    height: 36%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.regright {
+    height: 18%;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+.logbtn {
+    display: flex;
+    width: 50vw;
+    justify-content: space-between;
+}
+
+.logbtn button {
+    height: 8vh;
+    width: 32vw;
+    font-size: 1.4em;
+    border-radius: 1vw;
+    cursor: pointer;
+    margin: auto;
+}
+
+#login {
+    background-color: rgba(47, 177, 231, 1);
+    color: white;
+    border-style: none;
+}
+
+#forgor {
+    background-color: white;
+    border-style: solid;
+    border-color: rgba(47, 177, 231, 1);
+    color: rgba(47, 177, 231, 1);
+    height: 8vh;
+    width: 24vw;
+    font-size: 1.4em;
+    border-radius: 1vw;
+    cursor: pointer;
+    line-height: 8vh;
+    text-decoration: none;
+}
+
+#forgor:hover {
+    background-color: rgba(0, 0, 0, 0.12);
+    transition: all ease 400ms;
+}
+
+#login:hover {
+    background-color: rgba(47, 177, 231, 0.8);
+    transition: all ease 400ms;
+}
+
+.dob {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.dob input {
+    height: 8vh;
+    border-style: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.4vw;
+    font-size: 1.6em;
+    padding: 0 1vw 0 1vw;
+    text-align: center;
+    width: 100%;
+}
+
+.regbtn {
+    display: flex;
+    justify-content: center;
+}
+
+#reg {
+    background-color: rgba(122, 81, 180, 1);
+    color: white;
+    border-style: none;
+    height: 8vh;
+    width: 90%;
+    font-size: 1.4;
+    border-radius: 1vw;
+    cursor: pointer;
+    text-align: center;
+}
+
+#reg:hover {
+    background-color: rgba(122, 81, 180, 0.8);
+}
+
+.hotRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 2vw;
+}
+
+.entry {
+    background-color: white;
+    height: 34vh;
+    width: 68%;
+    border-radius: 0.3vw;
+}
+
+.details {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
+}
+
+.imgcard {
+    height: 34vh;
+    background-color: white;
+    width: 28%;
+    border-radius: 0.3vw;
+}
+
+.imgcard img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.3vw;
+}
+
+.imgcard:hover {
+    transform: scale(1.1);
+    transition: all ease 400ms;
+    box-shadow: 0 0 20px grey;
+}
+
+.detL {
+    display: flex;
+    width: 70%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detR {
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 9vw;
+    text-align: center;
+}
+
+#book {
+    height: 8vh;
+    border-style: solid;
+    border-radius: 0.3vw;
+    font-size: 1.3em;
+    background-color: white;
+    border-color: rgb(40, 40, 79);
+    font-weight: 500;
+    width: 100%;
+    cursor: pointer;
+}
+
+#book:hover {
+    background-color: rgb(40, 40, 79);
+    color: white;
+    transition: all ease 400ms;
+}
+
+.bookwin {
+    display: flex;
+    background-color: white;
+    width: 86vw;
+    height: 86vh;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    border-radius: 1vw;
+    flex-direction: row;
+}
+
+.bookleft {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 88%;
+    text-align: center;
+}
+
+.binput span {
+    width: 10vw;
+    line-height: 8vh;
+}
+
+.binput {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.binput input {
+    height: 8vh;
+    width: 8vw;
+    border-style: none;
+    background-color: rgb(238, 238, 238);
+    border-radius: 0.4vw;
+    font-size: 1.4em;
+    padding: 0 1vw 0 1vw;
+    text-align: center;
+}
+
+.bookright {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 90%;
+}
+
+.tradio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-evenly;
+    height: 80%;
+}
+
+.tchoice1,
+.tchoice2,
+.tchoice3,
+.tchoice4 {
+    border-style: solid;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10vh;
+    border-radius: 0.3vw;
+    border-color: rgb(40, 40, 79);
+    background-color: white;
+}
+
+
+.tchoice1 label,
+.tchoice2 label,
+.tchoice3 label,
+.tchoice4 label {
+    font-weight: 600;
+    line-height: 5vh;
+    font-size: 1.4em;
+    width: 20vw;
+    display: block;
+    cursor: pointer;
+}
+
+.tchoice1 span,
+.tchoice2 span,
+.tchoice3 span,
+.tchoice4 span {
+    font-weight: 300;
+    font-size: 0.8em;
+    width: 20vw;
+}
+
+#t1:hover~.bookwin>.bookright>.tradio>.tchoice1,
+#t2:hover~.bookwin>.bookright>.tradio>.tchoice2,
+#t3:hover~.bookwin>.bookright>.tradio>.tchoice3,
+#t4:hover~.bookwin>.bookright>.tradio>.tchoice4 {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+#t1:checked~.bookwin>.bookright>.tradio>.tchoice1,
+#t2:checked~.bookwin>.bookright>.tradio>.tchoice2,
+#t3:checked~.bookwin>.bookright>.tradio>.tchoice3,
+#t4:checked~.bookwin>.bookright>.tradio>.tchoice4 {
+    background-color: rgb(40, 40, 79);
+}
+
+#t1:checked~.bookwin>.bookright>.tradio>.tchoice1 label,
+#t2:checked~.bookwin>.bookright>.tradio>.tchoice2 label,
+#t3:checked~.bookwin>.bookright>.tradio>.tchoice3 label,
+#t4:checked~.bookwin>.bookright>.tradio>.tchoice4 label {
+    color: white;
+}
+
+#t1:checked~.bookwin>.bookright>.tradio>.tchoice1 span,
+#t2:checked~.bookwin>.bookright>.tradio>.tchoice2 span,
+#t3:checked~.bookwin>.bookright>.tradio>.tchoice3 span,
+#t4:checked~.bookwin>.bookright>.tradio>.tchoice4 span {
+    color: white;
+}
+
+#pickups {
+    width: 11vw;
+}
+
+#pickup {
+    width: 32vw;
+    font-size: 1em;
+}
+
+#payment {
+    background-color: rgba(122, 81, 180, 1);
+    color: white;
+    border-style: none;
+    height: 8vh;
+    width: 70%;
+    font-size: 1.4em;
+    border-radius: 1vw;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#payment:hover {
+    background-color: rgba(122, 81, 180, 0.8);
+}
+
+.cardwin {
+    background-color: white;
+    margin: auto;
+    height: 76vh;
+    width: 80vw;
+    border-radius: 1vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.cardwin form {
+    display: flex;
+    height: 76vh;
+    width: 70vw;
+    justify-content: space-between;
+}
+
+.cardleft {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 76vh;
+    width: 30vw;
+}
+
+.crow {
+    display: flex;
+    width: 30vw;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.crow span {
+    width: 6vw;
+    text-align: left;
+}
+
+.cinput input {
+    width: 6vw;
+    height: 8vh;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border-style: none;
+    border-radius: 0.4vw;
+    font-size: 1.4em;
+}
+
+#longspan {
+    width: 12vw;
+}
+
+.cninput input {
+    width: 7.2vw;
+    height: 8vh;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    border-style: none;
+    border-radius: 0.4vw;
+    font-size: 1.4em;
+}
+
+.cninput {
+    display: flex;
+    justify-content: space-between;
+}
+
+#longboi {
+    width: 30vw;
+}
+
+
+.cardright {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 76vh;
+    width: 30vw;
+    text-align: center;
+}
+
+.subtotal {
+    width: 30vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#price {
+    width: 5.5vw;
+    text-align: left;
+}
+
+#title {
+    width: 18vw;
+    text-align: left;
+}
+
+#title0 {
+    width: 4vw;
+    text-align: left;
+}
+
+#paynow {
+    height: 8vh;
+    border-style: none;
+    background-color: rgba(47, 177, 231, 1);
+    border-radius: 0.3vw;
+    color: white;
+    font-size: 1.3em;
+    transition: all ease 300ms;
+    cursor: pointer;
+}
+
+#paynow:hover {
+    background-color: rgba(122, 81, 180, 1);
+    color: white;
+    font-size: 1.6em;
+    border-radius: 2vw;
+}
+
+.recwindow {
+    width: 70vw;
+    background-color: white;
+    margin: auto;
+    display: flex;
+    height: 64vh;
+    flex-direction: column;
+    padding: 2vw;
+    justify-content: space-evenly;
+    border-radius: 1vw;
+}
+
+.recrow {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    align-items: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#print {
+    height: 6vh;
+    border-style: none;
+    background-color: rgba(47, 177, 231, 1);
+    border-radius: 0.3vw;
+    color: white;
+    font-size: 1.2em;
+    transition: all ease 300ms;
+    cursor: pointer;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
